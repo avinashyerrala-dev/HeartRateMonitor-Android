@@ -90,15 +90,24 @@ Splash → UserProfile → MainShell
 ``` 
 Back-stack is preserved per tab; re-selecting current tab pops to root.
 
-### 🔧 Setup & Permissions
-![Setup](docs/gifs/setup.gif)
+## 🎬 Demo
 
-### 📡 Connect to Device
-![Connect](docs/gifs/connection.gif)
-
-### ❤️ Record & Finish Activity
-![Record & Finish](docs/gifs/finish.gif)
-
+<table>
+  <tr>
+    <td align="center">
+      <strong>🔧 Setup</strong><br/>
+      <img src="docs/gifs/setup.gif" width="250"/>
+    </td>
+    <td align="center">
+      <strong>📡 Connect & ❤️Start Actvity</strong><br/>
+      <img src="docs/gifs/connection.gif" width="250"/>
+    </td>
+    <td align="center">
+      <strong>🏁 Finish</strong><br/>
+      <img src="docs/gifs/finish.gif" width="250"/>
+    </td>
+  </tr>
+</table>
 
 🗺 Roadmap / TODO
 Settings screen to manage devices, update profile, integrate to the thirdparty apps.
