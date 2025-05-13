@@ -2,15 +2,15 @@
 A showcase Android application that connects to a Bluetooth LE heart-rate strap, visualises live HR data, logs each workout and presents a clean-architecture implementation of Hilt DI, Jetpack Compose, Navigation, Room and Coroutines.
 
 📸 Key features
-Feature	Screenshot*
-Splash ➜ Profile ➜ Main shell flow with nested graphs	(add in repo)
-Device-picker overlay (bottom sheet) that scans only while visible
-Tabbed UI (Home / Activity / Settings) powered by a single HRMScaffold
-Live HR display with colour-coded zone background
-Activity details screen – zone bar chart + HR line chart, all in pure Compose Canvas
-Room persistence of session summary and raw HR graph
+| Feature                                                                                  | Screenshot      |
+| ---------------------------------------------------------------------------------------- | --------------- |
+| **Splash ➜ Profile ➜ Main shell** flow with nested graphs                                |                 |
+| **Device-picker overlay** (bottom sheet) that scans only while visible                   |                 |
+| **Tabbed UI (Home / Activity / Settings)** powered by a single `HRMScaffold`             |                 |
+| **Live HR display** with colour-coded zone background                                    |                 |
+| **Activity details screen** – zone bar chart + HR line chart, all in pure Compose Canvas |                 |
+| **Room persistence** of session summary **and** raw HR graph                             |                 |
 
-* Add actual screenshots/gifs after cloning.
 
 🛠 Tech stack
 | Layer            | Libraries / tools                                                                           |
@@ -50,14 +50,13 @@ Scanning is lifecycle-safe: starts only when the overlay sheet is shown; cancell
 PermissionManager gatekeeps all required runtime permissions before the Nav graph is composed.
 
 🚀 Build & run
-
+```text
 git clone https://github.com/avinashyerrala-dev/HeartRateMonitor-Android.git
 cd HeartRateMonitor
 ./gradlew installDebug        # or run via Android Studio Hedgehog+
+``` 
 Requirements
-
 Android Studio Hedgehog | AGP 8.3 | Kotlin 1.9+
-
 Device running Android 8 (Oreo, API 26) or newer with BLE; chart colours tuned for dark & light themes.
 
 ⚙️ Runtime permissions
