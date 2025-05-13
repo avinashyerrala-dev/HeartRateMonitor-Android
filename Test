@@ -1,0 +1,26 @@
+ think we can do this a better and redesing the UI.
+
+1. Create a reusable AppScaffold ("TopBar.kt currently couples the drop‑down click to a parent composable via direct lambda 
+. Moving everything behind HRMScaffold makes one entry‑point for every screen."). 2. Move navigation to nested graphs. AppNavGraph.kt currently mixes everything in one builder file. I think we can create "app/
+ └─ navigation/
+     ├─ RootNavGraph.kt
+     ├─ HomeGraph.kt
+     ├─ HistoryGraph.kt
+     └─ SettingsGraph.kt
+" some thing like that 3. Introduce UiState / UiEvent contracts for Home & History. 4. 	Split navigation into tiny functions 5. Move nav logic out of SplashScreen into a SplashViewModel. SplashScreen does navigation by itself. Create SplashViewModel. 6.Turn ConnectionOverlay into sheet content
+Replace your custom Box + AnimatedVisibility overlay with Material 3 ModalBottomSheet.
+Benefits:
+
+Automatic drag‑to‑dismiss
+
+Dark scrim & a11y
+
+Pull‑to‑expand gesture
+7 · Extract design‑system components
+Move:
+
+TopBar.kt ➜ core:ui/topbar/HRMTopBar.kt
+
+Color, typography, spacing ➜ core:ui/theme/
+
+That allows other projects (or recruiters) to see a reusable design‑system module in our repo.
