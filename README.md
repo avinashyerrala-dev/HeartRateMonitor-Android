@@ -1,4 +1,4 @@
-Heart Rate Monitor — Jetpack Compose BLE Demo
+# Heart Rate Monitor — Jetpack Compose BLE Demo
 A showcase Android application that connects to a Bluetooth LE heart-rate strap, visualises live HR data, logs each workout and presents a clean-architecture implementation of Hilt DI, Jetpack Compose, Navigation, Room and Coroutines.
 
 📸 Key features
@@ -24,6 +24,7 @@ Permissions	ActivityResultContracts.RequestMultiplePermissions() with graceful �
 Testing	JUnit 5, Turbine for Flow tests (samples in :test)
 
 🔖 Architecture quick tour
+```text
 app/
 ├─ data/
 │   ├─ entity/       Room entities
@@ -39,6 +40,7 @@ app/
 │   ├─ screen/       Composables grouped by feature
 │   └─ components/   HRMScaffold, BottomNavBar, charts, chips…
 └─ util/             Color palette, date helpers, permission manager
+``` 
 Single BLE connection is owned by BleViewModel (activity scope), exposed via StateFlows and shared across tabs.
 
 Scanning is lifecycle-safe: starts only when the overlay sheet is shown; cancelled when hidden (awaitClose in repository).
@@ -65,7 +67,7 @@ Notifications (optional)	POST_NOTIFICATIONS (Android 13+)
 PermissionManager requests them on first launch and guides the user to App Settings if permanently denied.
 
 📈 Data model
-
+```text
 ActivitySummaryEntity
 ├─ id (PK)         LONG    auto-gen
 ├─ activityType    TEXT    (Running / Cycling / etc.)
@@ -85,14 +87,21 @@ Splash → UserProfile → MainShell
 ├─ home_graph       (Home, details…)
 ├─ activity_graph   (History list, Details)
 └─ settings_graph   (Prefs)
+``` 
 Back-stack is preserved per tab; re-selecting current tab pops to root.
 
 🗺 Roadmap / TODO
+Settings screen to manage devices, update profile, integrate to the thirdparty apps.
+
 BLE background reconnection service
+
+Export session to Samsung health and google fit
+
+Migrate the code to KMP
 
 Export session as GPX/TCX
 
 Wear OS companion
 
-Unit tests for ViewModels (sample included)
+Unit tests 
 
