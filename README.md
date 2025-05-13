@@ -13,15 +13,17 @@ Room persistence of session summary and raw HR graph
 * Add actual screenshots/gifs after cloning.
 
 🛠 Tech stack
-Layer	Libraries / tools
-UI	Jetpack Compose 1.6, Material 3, Navigation-Compose,
-DI	Hilt 2.49
-BLE	BluetoothLeScanner, custom BleManager (Kotlin Coroutines channel)
-Persistence	Room 2.6 (activity_summary, activity_graph)
-Architecture	Clean Architecture (data → domain → presentation) + single-activity, multi-graph navigation
-Charts	Custom Compose Canvas (no third-party chart lib)
-Permissions	ActivityResultContracts.RequestMultiplePermissions() with graceful “deny” handling
-Testing	JUnit 5, Turbine for Flow tests (samples in :test)
+| Layer            | Libraries / tools                                                                           |
+| ---------------- | ------------------------------------------------------------------------------------------- |
+| **UI**           | Jetpack Compose 1.6, Material 3, Navigation-Compose, FlowRow (experimental-layout)          |
+| **DI**           | Hilt 2.49                                                                                   |
+| **BLE**          | `BluetoothLeScanner`, custom `BleManager` (Kotlin Coroutines channel)                       |
+| **Persistence**  | Room 2.6 (`activity_summary`, `activity_graph`)                                             |
+| **Architecture** | Clean Architecture (data → domain → presentation) + single-activity, multi-graph navigation |
+| **Charts**       | Custom Compose Canvas (no third-party chart lib)                                            |
+| **Permissions**  | `ActivityResultContracts.RequestMultiplePermissions()` with graceful “deny” handling        |
+| **Testing**      | JUnit 5, Turbine for Flow tests *(samples in `:test`)*                                      |
+
 
 🔖 Architecture quick tour
 ```text
