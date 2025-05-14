@@ -1,7 +1,7 @@
 package com.health.heartratemonitor.domain.usecases.activity
 
-import com.health.heartratemonitor.domain.actvity.ActivityTrackerManager
-import com.health.heartratemonitor.domain.actvity.ActivityTrackingResult
+import com.health.heartratemonitor.domain.service.ActivityTrackerManager
+import com.health.heartratemonitor.domain.service.ActivityTrackingResult
 import com.health.heartratemonitor.domain.model.ActivitySession
 import com.health.heartratemonitor.domain.model.UserProfile
 import com.health.heartratemonitor.domain.repository.ActivityRepository

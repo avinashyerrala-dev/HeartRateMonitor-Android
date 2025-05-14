@@ -2,7 +2,7 @@ package com.health.heartratemonitor.presentation.history
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.health.heartratemonitor.domain.history.GetAllActivitySessionsUseCase
+import com.health.heartratemonitor.domain.usecases.history.GetAllActivitySessionsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

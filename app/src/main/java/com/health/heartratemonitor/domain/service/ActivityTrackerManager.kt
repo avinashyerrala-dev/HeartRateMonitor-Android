@@ -1,4 +1,4 @@
-package com.health.heartratemonitor.domain.actvity
+package com.health.heartratemonitor.domain.service
 
 import com.health.heartratemonitor.domain.utils.HeartRateZone
 import kotlinx.coroutines.flow.MutableStateFlow

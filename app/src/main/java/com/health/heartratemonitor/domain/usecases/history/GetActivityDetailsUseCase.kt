@@ -1,4 +1,4 @@
-package com.health.heartratemonitor.domain.history
+package com.health.heartratemonitor.domain.usecases.history
 
 import com.health.heartratemonitor.domain.model.ActivitySession
 import com.health.heartratemonitor.domain.repository.ActivityRepository

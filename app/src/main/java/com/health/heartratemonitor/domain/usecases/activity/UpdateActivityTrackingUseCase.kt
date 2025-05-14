@@ -1,6 +1,6 @@
 package com.health.heartratemonitor.domain.usecases.activity
 
-import com.health.heartratemonitor.domain.actvity.ActivityTrackerManager
+import com.health.heartratemonitor.domain.service.ActivityTrackerManager
 import com.health.heartratemonitor.domain.utils.HeartRateZone
 import javax.inject.Inject
 import javax.inject.Singleton
